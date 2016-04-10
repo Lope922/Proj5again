@@ -4,13 +4,13 @@
     <title>Welcome</title>
 </head>
 <body>
-<h1>Welcome</h1>
+<h1>Welcome Trainer</h1>
 <h2>Here are your workouts </h2>
-<p>name:  reps: sets: </p>
-{% for workout in context2 %}
-<ul>
-    {{ workout.workout_name }}
-</ul>
+<!-- Took me 5 hours of tinkering to find out that i needed to refer to the context object by its key name-->
+{% for workout in bunch %}
+<ol>
+  <li> name {{ workout.workout_name }} sets {{ workout.sets}} reps:  {{ workout.reps}} </li>
+</ol>
 {% endfor %}
 </body>
 </html>

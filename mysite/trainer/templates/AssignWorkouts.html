@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Assign Clients Workouts</title>
+</head>
+<body>
+<!-- this form will use a combo box to select a list of clients for the personal trainer to assign workouts too -->
+<form method="get">
+    <h1> Select a client </h1>
+    <!--  render clients from the clients list NOTE TODO when creating clients model assign true false value for PT assigned -->
+    <select > <option>"Clients go here"</option>
+        {% for client in client_query %}
+                <option>{{client}}</option>
+        </select>
+    <button type="button" formmethod="get"> Select Client </button>
+    {% if combobox.selection.selected=true %}
+    <!-- display a list of workouts to assign them as well as a submit button  -->
+
+    {% endif %}
+    <!-- client should be able to schedule time to meet up. NOT so much the Trainer -->
+    <div></div>
+
+    <!-- see if form can refresh on auto select -->
+    <h2> Assign workouts to your client from your list: </h2>
+    <select>
+        <option>workout name </option>
+        {% for workout in trainer_workouts $}
+        <option>{{workout}}</option>
+    </select>
+
+    <input type="number"> <label> Repetitions </label></input>
+
+    <input type="number"> <label> Sets</label> </input
+    <button type="submit"> Submit</button> <br>
+    <button type="reset">Reset </button>
+
+</form>
+</body>
+</html>

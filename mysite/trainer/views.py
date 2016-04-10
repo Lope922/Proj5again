@@ -16,10 +16,11 @@ def index(request):
     v = workout.objects.values('workout_id', 'workout_name', 'sets', 'reps')
     # the flat true returns a flat list of values instead of a queryset/ dict
     # returns just a list not a dict
-    workout_w_rep_and_sets = workout.objects.values("reps", "sets", "workout_name")
+    workout_w_rep_and_sets = workout.objects.values("workout_name", "reps", "sets")
     just_names = workout.objects.values_list('workout_name', flat=True)
+
     context2 = {'bunch': workout_w_rep_and_sets}
-    context3 = {'just names': just_names}
+    context3 = {'just_names': just_names}
     return render(request, "WelcomePage.html", context2)
 
 
