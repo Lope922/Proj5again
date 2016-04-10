@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+<h1>Welcome</h1>
+<h2>Here are your workouts </h2>
+<p>name:  reps: sets: </p>
+{% for workout in context2 %}
+<ul>
+    {{ workout.workout_name }}
+</ul>
+{% endfor %}
+</body>
+</html>

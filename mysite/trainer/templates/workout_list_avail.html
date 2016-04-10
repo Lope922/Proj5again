@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if workout_list %}
+    <title>Workouts in your library </title>
+    {% else %}
+    <title>There are not workouts in the list returned</title>
+    {% endif %}
+
+</head>
+<body>
+<ul>
+    {% for workout in context %}
+    <li> workout.workout_name </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
