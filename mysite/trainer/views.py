@@ -1,5 +1,5 @@
 from django.shortcuts import render , redirect
-from .models import workout
+from .models import workout , client
 
 from django.http import HttpResponse
 
@@ -30,7 +30,12 @@ def create(request):
 
 
 def assign(request):
-    return HttpResponse("Here is where you will assign a workout routine")
+    #Todo later check and make sure if clients are assigned trainers or not.
+    c = client.objects.all()
+    client_query = {'client_query': c }
+
+    return  render(request, "AssignWorkouts.html", client_query)
+    #return HttpResponse("Here is where you will assign a workout routine")
 
 
 def schedule(request):

@@ -12,12 +12,13 @@
     <select > <option>"Clients go here"</option>
         {% for client in client_query %}
                 <option>{{client}}</option>
+        {% endfor %}
         </select>
-    <button type="button" formmethod="get"> Select Client </button>
-    {% if combobox.selection.selected=true %}
+    <button type="button"> Select Client </button>
+     <!-- if combobox.selection.selected=true  -->
     <!-- display a list of workouts to assign them as well as a submit button  -->
 
-    {% endif %}
+
     <!-- client should be able to schedule time to meet up. NOT so much the Trainer -->
     <div></div>
 
@@ -31,7 +32,8 @@
 
     <input type="number"> <label> Repetitions </label></input>
 
-    <input type="number"> <label> Sets</label> </input
+    <input type="number"> <label> Sets</label> </input>
+    <br>
     <button type="submit"> Submit</button> <br>
     <button type="reset">Reset </button>
 

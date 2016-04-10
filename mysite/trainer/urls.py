@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^schedule', views.schedule, name='schedule'),
 
 
+    # this url is where the Trainer will assign their clients their workout program
     url(r'^assign', views.assign, name='assign'),
 
 
