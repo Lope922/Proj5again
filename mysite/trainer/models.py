@@ -63,9 +63,14 @@ class schedule(models.Model):
     appt_time = models.TimeField(default=timezone.now)
     # and an appointment date
     appt_date = models.DateField(blank=True, null=True)
+
     # the trainer (should be the currently logged in trainer)
 
     #clients ( a query for all clients that have been assigned to current trainer)
+    def __str__(self):
+        display = "Appointment Date {} Time {} Client {} ".format(self.appt_date, self.appt_time, self.appt_client)
+        return display
+
 
 #NOTE: To activate models adjust mysite/settings. add under INSTALLED_APPS
 

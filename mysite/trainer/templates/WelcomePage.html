@@ -4,13 +4,20 @@
     <title>Welcome</title>
 </head>
 <body>
+
 <h1>Welcome Trainer</h1>
-<h2>Here are your workouts </h2>
+<h2>Here is your workouts library  </h2>
 <!-- Took me 5 hours of tinkering to find out that i needed to refer to the context object by its key name-->
 {% for workout in bunch %}
-<ol>
-  <li> name {{ workout.workout_name }} sets {{ workout.sets}} reps:  {{ workout.reps}} </li>
-</ol>
+<ul>
+  <li> Name:  {{ workout.workout_name }}</li>
+    <!-- <li> name {{ workout.workout_name }} sets {{ workout.sets}} reps:  {{ workout.reps}}  </li> -->
+</ul>
 {% endfor %}
+<h3> Here are your scheduled upcoming appointments </h3>
+    {% for appt in sched_appts %}
+<li>DATE: {{ appt.appt_date |date:"D d M Y" }}TIME: {{ appt.appt_time|time:"h:i:A"}}CLIENT: {{ appt.appt_client }} </li>
+    {% endfor %}
+
 </body>
 </html>

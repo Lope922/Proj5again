@@ -111,8 +111,10 @@ TIME_ZONE = 'America/Chicago'
 
 USE_I18N = True
 
-USE_L10N = True
-
+#trying to turn this off to see how it effects date time format
+USE_L10N = False
+DATE_FORMAT = "Y-m-d"
+TIME_FORMAT = "h:i:A"
 USE_TZ = True
 
 

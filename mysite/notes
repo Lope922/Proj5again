@@ -1,0 +1,23 @@
+notes of things to improve on
+
+- Days since customers last visit
+    - maybe a blog for them to be able to communicate with their clients rather than e-mail
+    - I would like to find a rounded meter that shows how close clients are to achieving thier goals.
+
+
+- Client accounts should allow them to login and see their goals and their workout assignemnts and schedule with personal trainers
+TODO this i need to configure the regular expression pattern in the url to display the current users workout goals and progress.
+
+
+Todos for tomorrow.
+
+try to finalize app and solidify basics that i have established thus far. Make changes to reps and set to allow trainers
+to update the values. Do they need to allow nulls now ? Consider this and re work models and template s
+
+read up on unit test and try and write 3 unit tests before presentation
+
+possibly create a clients portion of the app to separate clients from the trainer side of the app
+
+add the bool value for customers that do not have trainers assigned to allow trainers to try and message potential clients
+
+

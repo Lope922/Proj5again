@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your schedule </title>
+</head>
+<body>
+<h3> Here are your scheduled upcoming appointments </h3>
+    {% for appt in appointments %}
+    <!-- TODO for an easy workaround try and display the clients name linked to a url -->
+<li>DATE: {{ appt.appt_date |date:"D d M Y" }}  TIME: {{ appt.appt_time|time:"h:i:A"}}  CLIENT: {{ appt.appt_client }} </li>
+    {% endfor %}
+
+</body>
+</html>
